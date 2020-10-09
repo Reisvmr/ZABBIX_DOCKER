@@ -221,8 +221,7 @@ services:
       - ./zbx_env/var/lib/zabbix/enc:/var/lib/zabbix/enc:ro
       - ./zbx_env/var/lib/zabbix/ssh_keys:/var/lib/zabbix/ssh_keys:ro
     ports:
-    # Zabbix_Agent
-      - '161:161'
+    # Zabbix_Agent      
     - '10050:10050'
     # Zabbix_Agent SNMP
       - '161:161/udp'
