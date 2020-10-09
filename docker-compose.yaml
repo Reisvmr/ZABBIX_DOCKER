@@ -51,7 +51,10 @@ services:
       - mysql
     restart: always
     ports:
+      # Zabbix Agent
       - '10051:10051'
+      # Zabbix_Agent SNMP
+      - '161:161'
     volumes:
       - ./zbx_env/usr/lib/zabbix/externalscripts:/usr/lib/zabbix/externalscripts:ro
       - ./zbx_env/var/lib/zabbix/modules:/var/lib/zabbix/modules:ro
