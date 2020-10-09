@@ -27,9 +27,7 @@ sudo add-apt-repository \
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ````
-```shell
-chmod +x /usr/local/bin/docker-compose
-```
+
 ### Baixando o repositório do projeto
 
 ```shell
