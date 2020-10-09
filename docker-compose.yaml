@@ -200,7 +200,7 @@ services:
     ports:
       - '3000:3000'
     environment: 
-      - GF_INSTALL_PLUGINS=alexanderzobnin-zabbix-app
+      - GF_INSTALL_PLUGINS=alexanderzobnin-zabbix-app,grafana-worldmap-panel,grafana-piechart-panel,grafana-clock-panel,aceiot-svg-panel,farski-blendstat-panel,savantly-heatmap-panel,ayoungprogrammer-finance-datasource,grafana-worldmap-panel
     depends_on:
       - mysql
       - zabbix-server
