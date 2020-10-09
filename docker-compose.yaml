@@ -51,10 +51,7 @@ services:
       - mysql
     restart: always
     ports:
-      # Zabbix Agent
       - '10051:10051'
-      # Zabbix_Agent SNMP
-      - '161:161'
     volumes:
       - ./zbx_env/usr/lib/zabbix/externalscripts:/usr/lib/zabbix/externalscripts:ro
       - ./zbx_env/var/lib/zabbix/modules:/var/lib/zabbix/modules:ro
@@ -224,7 +221,12 @@ services:
       - ./zbx_env/var/lib/zabbix/enc:/var/lib/zabbix/enc:ro
       - ./zbx_env/var/lib/zabbix/ssh_keys:/var/lib/zabbix/ssh_keys:ro
     ports:
-      - '10050:10050'
+    # Zabbix_Agent
+      - '161:161'
+    - '10050:10050'
+    # Zabbix_Agent SNMP
+      - '161:161/udp'
+
     environment:
       - ZBX_HOSTNAME=Zabbix server
       - ZBX_SERVER_HOST=127.0.0.1
