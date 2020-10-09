@@ -26,6 +26,8 @@ sudo add-apt-repository \
 ```shell
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo apt install docker-compose
+
 ````
 
 ### Baixando o repositório do projeto
@@ -47,7 +49,7 @@ mkdir -p ./zbx_env/usr/lib/zabbix/externalscripts \
 ```
 ### Iniciando o Zabbix com Docker compose
 ```shell
-docker-compose up -d
+docker-compose up -d --build
 ```
 
 ### Acessando o zabbix
