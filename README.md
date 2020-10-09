@@ -34,8 +34,8 @@ chmod +x /usr/local/bin/docker-compose
 
 ```shell
 cd /opt/
-git clone https://github.com/williamnormandia/Zabbix-docker-compose.git
-cd Zabbix-docker-compose
+git clone git@github.com:Reisvmr/ZABBIX_DOCKER.git
+cd ZABBIX_DOCKER
 ```
 
 ### Criando persistencia para os dados
